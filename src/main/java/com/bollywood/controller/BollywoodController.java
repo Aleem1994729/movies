@@ -22,7 +22,7 @@ public class BollywoodController {
         return bollywoodService.findAll();
     }
 
-    @PostMapping (value = "/saveMovie", produces = "plain/text")
+    @PostMapping (value = "/saveMovies", produces = "plain/text")
     public String MovieName(@RequestBody Bollywood movie) {
         return String.valueOf(bollywoodService.saveMovie(movie));
     }
@@ -32,7 +32,7 @@ public class BollywoodController {
         return String.valueOf(bollywoodService.isMovieAvailable( movieId));
     }
 
-    @PostMapping (value="/updateMovie" ,produces = "plain/text")
+    @PostMapping (value="/updateMovies" ,produces = "plain/text")
     public String updateMovie(@RequestParam(value = "Id") int movieName, @RequestBody Bollywood movie) {
         return String.valueOf(bollywoodService.updateMovie(movieName,movie));
     }
