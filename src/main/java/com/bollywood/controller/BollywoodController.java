@@ -37,7 +37,7 @@ public class BollywoodController {
         return String.valueOf(bollywoodService.updateMovie(movieName,movie));
     }
 
-    @PostMapping (value="/deleteMovie" ,produces = "plain/text")
+    @PostMapping (value="/deleteMovies" ,produces = "plain/text")
     public String deleteMovie(@RequestParam(value = "name") int movieId) {
         return bollywoodService.deleteMovie(movieId);
     }
